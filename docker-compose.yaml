@@ -12,8 +12,7 @@ services:
     container_name: fastfood_frontend
     ports:
       - 4200:4200
-    links:
-      - fastfood_backend
+  
 networks:
   default:
     name: fastfood_backend
