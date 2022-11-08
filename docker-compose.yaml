@@ -1,24 +1,15 @@
 version: '3.3'
 services:
-  server:
-    image: ubuntu:20.04
-    container_name: server
-    tty: true
-    stdin_open: true
+  fastfood_frontend:
+    build: ./fastfood_frontend
+    container_name: fastfood_frontend
+    ports:
+      - 4200:4200
     depends_on:
-      - mongo
-      - postgres
-      - redis
-    command: bash
-  mongo:
-    image: mongo
-    environment:
-      MONGO_INITDB_DATABASE: my-database
-  redis:
-    image: redis
-  postgres:
-    image: postgres
-    environment:
-      POSTGRES_DB: my-db
-      POSTGRES_USER: my-user
-      POSTGRES_PASSWORD: my-pass
+      - fastfood_backend
+  
+  fastfood_backend:
+    build: ./fastfood_backend
+    container_name: fastfood_backend
+    ports:
+      - 8094:8094
