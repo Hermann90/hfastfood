@@ -5,8 +5,6 @@ services:
     container_name: fastfood_backend
     ports:
       - 8094:8094
-    networks:
-      - web
 
 
   fastfood_frontend:
@@ -14,8 +12,9 @@ services:
     container_name: fastfood_frontend
     ports:
       - 4200:4200
-    networks:
-      - web
+    links:
+      - fastfood_backend
 networks:
-  web:
-    driver: bridge
+  default:
+    name: fastfood_backend
+    external: true
