@@ -12,7 +12,7 @@ import { ForgotPassword } from '../../Models/ForgotPassword.model';
 export class UserServiceService {
 
   constructor(private http:HttpClient) { }
-  baseUrl: string = "http://localhost:8094";
+  baseUrl: string = "http://fastfood_backend:8094/api";
    
 
   /*

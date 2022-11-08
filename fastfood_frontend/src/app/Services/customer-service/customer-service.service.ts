@@ -25,7 +25,7 @@ export class CustomerServiceService {
 	   * @throws ResourceNotFoundException : It is raised when no data is found with the given request
 	  */
 	getABranchItems(branchId: number) {
-		return this.http.get<Item[]>("http://localhost:8094/customer/getABranchItems/" + branchId);
+		return this.http.get<Item[]>("http://fastfood_backend:8094/api/customer/getABranchItems/" + branchId);
 	}
 
 
@@ -38,7 +38,7 @@ export class CustomerServiceService {
 	   * @return Item[]: a set of items related to the search text is returned
 	  */
 	searchItems(branchId: number, searchText: string) {
-		return this.http.get<Item[]>("http://localhost:8094/customer/searchItems/" + branchId + "/" + searchText);
+		return this.http.get<Item[]>("http://fastfood_backend:8094/api/customer/searchItems/" + branchId + "/" + searchText);
 	}
 
 
@@ -51,7 +51,7 @@ export class CustomerServiceService {
 	   * @throws ResourceNotFoundException : It is raised when no data is found with the given request
 	  */
 	getABranchCategories(branchId: number) {
-		return this.http.get<SubCategory[]>("http://localhost:8094/customer/getABranchSubCategories/" + branchId);
+		return this.http.get<SubCategory[]>("http://fastfood_backend:8094/api/customer/getABranchSubCategories/" + branchId);
 	}
 
 
@@ -64,7 +64,7 @@ export class CustomerServiceService {
 	   * @throws ResourceNotFoundException : It is raised when no data is found with the given request
 	  */
 	trackAnOrder(orderId: number) {
-		return this.http.get<Order[]>("http://localhost:8094/customer/trackAnOrder/" + orderId);
+		return this.http.get<Order[]>("http://fastfood_backend:8094/api/customer/trackAnOrder/" + orderId);
 	}
 
 
@@ -76,7 +76,7 @@ export class CustomerServiceService {
 	   * @return CarryBox: a object of a CarryBox of given Carry Box id
 	  */
 	getCarryBoxDetails(emailId: string) {
-		return this.http.get<CarryBox>("http://localhost:8094/customer/getACarryBoxDetails/" + emailId);
+		return this.http.get<CarryBox>("http://fastfood_backend:8094/api/customer/getACarryBoxDetails/" + emailId);
 	}
 
 
@@ -89,7 +89,7 @@ export class CustomerServiceService {
 	   * @throws ResourceNotFoundException : It is raised when no data is found with the given request
 	  */
 	getMyOrders(emailId: string) {
-		return this.http.get<Order[]>("http://localhost:8094/customer/getAnUserOrders/" + emailId);
+		return this.http.get<Order[]>("http://fastfood_backend:8094/api/customer/getAnUserOrders/" + emailId);
 	}
 
 
@@ -102,7 +102,7 @@ export class CustomerServiceService {
 	   * @throws ResourceNotFoundException : It is raised when no data is found with the given request	
 	  */
 	getMyAddresses(emailId: string) {
-		return this.http.get<Address[]>("http://localhost:8094/customer/getAnUserAddresses/" + emailId);
+		return this.http.get<Address[]>("http://fastfood_backend:8094/api/customer/getAnUserAddresses/" + emailId);
 	}
 
 
@@ -115,7 +115,7 @@ export class CustomerServiceService {
 	   * @return boolean: a boolean is returned to notify whether the item is added to carry box or not
 	  */
 	addItemToCarryBox(emailId: string, itemId: number) {
-		return this.http.post<boolean>("http://localhost:8094/customer/addAnItemToCarryBox/" + emailId, itemId);
+		return this.http.post<boolean>("http://fastfood_backend:8094/api/customer/addAnItemToCarryBox/" + emailId, itemId);
 	}
 
 
@@ -128,7 +128,7 @@ export class CustomerServiceService {
 	   * @throws ResourceNotFoundException : It is raised when no data is found with the given request
 	  */
 	addANewAddress(emailId: string, address: Address) {
-		return this.http.post<boolean>("http://localhost:8094/customer/addANewAddress/" + emailId, address);
+		return this.http.post<boolean>("http://fastfood_backend:8094/api/customer/addANewAddress/" + emailId, address);
 	}
 
 	/* Method:updateAnAddress
@@ -139,7 +139,7 @@ export class CustomerServiceService {
 		* @throws ResourceNotFoundException : It is raised when no data is found with the given request
 	   */
 	updateAnAddress(emailId: string, address: Address) {
-		return this.http.put<boolean>("http://localhost:8094/customer/updateAnAddress/" + emailId, address);
+		return this.http.put<boolean>("http://fastfood_backend:8094/api/customer/updateAnAddress/" + emailId, address);
 	}
 
 
@@ -152,7 +152,7 @@ export class CustomerServiceService {
 	   * @return number: orderId is returned
 	  */
 	placeOrder(emailId: string, branchId: number, addressId: number) {
-		return this.http.post<boolean>("http://localhost:8094/customer/placeANewOrder/" + emailId + "/" + branchId + "/" + addressId, "");
+		return this.http.post<boolean>("http://fastfood_backend:8094/api/customer/placeANewOrder/" + emailId + "/" + branchId + "/" + addressId, "");
 	}
 
 
@@ -166,7 +166,7 @@ export class CustomerServiceService {
 	   * @return boolean: a boolean is returned to notify whether an item in the carry box is updated or not
 	  */
 	updateItemInCarryBox(emailId: string, itemId: number, quantity: number) {
-		return this.http.put<boolean>("http://localhost:8094/customer/updateACarryBoxItem/" + emailId + "/" + itemId, quantity);
+		return this.http.put<boolean>("http://fastfood_backend:8094/api/customer/updateACarryBoxItem/" + emailId + "/" + itemId, quantity);
 	}
 
 
@@ -179,7 +179,7 @@ export class CustomerServiceService {
 	   * @return boolean: a boolean is returned to notify whether the item is deleted from carry box or not
 	  */
 	deleteACarryBoxItem(emailId: string, itemId: number) {
-		return this.http.delete<boolean>("http://localhost:8094/customer/deleteACarryBoxItem/" + emailId + "/" + itemId);
+		return this.http.delete<boolean>("http://fastfood_backend:8094/api/customer/deleteACarryBoxItem/" + emailId + "/" + itemId);
 	}
 
 
@@ -190,7 +190,7 @@ export class CustomerServiceService {
 		* @return boolean: a boolean is returned to notify whether the items are deleted from carry box or not
 	   */
 	deleteAnAddress(addressId: number) {
-		return this.http.delete<boolean>("http://localhost:8094/customer/deleteAnAddress/" + addressId);
+		return this.http.delete<boolean>("http://fastfood_backend:8094/api/customer/deleteAnAddress/" + addressId);
 	}
 
 
@@ -201,7 +201,7 @@ export class CustomerServiceService {
 	   * @return boolean: a boolean is returned to notify whether the items are deleted from carry box or not
 	  */
 	clearTheCarryBox(emailId: string) {
-		return this.http.delete<boolean>("http://localhost:8094/customer/clearACarryBox/" + emailId);
+		return this.http.delete<boolean>("http://fastfood_backend:8094/api/customer/clearACarryBox/" + emailId);
 	}
 
 
@@ -212,7 +212,7 @@ export class CustomerServiceService {
 	   * @return Category[]: a list of category objects will be returned
 	*/
 	getABranchCategoryList(branchId: number) {
-		return this.http.get<Category[]>("http://localhost:8094/customer/getABranchCategories/" + branchId);
+		return this.http.get<Category[]>("http://fastfood_backend:8094/api/customer/getABranchCategories/" + branchId);
 	}
 
 
@@ -223,7 +223,7 @@ export class CustomerServiceService {
 	   * @return User: a user object will be retuned
 	  */
 	getAnUserDetails(emailId: string) {
-		return this.http.get<User>("http://localhost:8094/customer/getAnUserDetails/" + emailId);
+		return this.http.get<User>("http://fastfood_backend:8094/api/customer/getAnUserDetails/" + emailId);
 	}
 
 
@@ -233,6 +233,6 @@ export class CustomerServiceService {
 	   * @return List<BranchDto>: a list of BranchDto objects will be retuned
 	  */
 	getAllBranches() {
-		return this.http.get<BranchDto[]>("http://localhost:8094/customer/getAllBranches");
+		return this.http.get<BranchDto[]>("http://fastfood_backend:8094/api/customer/getAllBranches");
 	}
 }

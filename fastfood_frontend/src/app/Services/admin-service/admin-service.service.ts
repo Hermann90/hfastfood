@@ -9,7 +9,7 @@ import { Order } from '../../Models/Order';
   providedIn: 'root'
 })
 export class AdminServiceService {
-  baseUrl: string = "http://localhost:8094/admin";
+  baseUrl: string = "http://fastfood_backend:8094/api/admin";
   constructor(private http:HttpClient) { }
 
   getSubCategories(username:string){
@@ -70,10 +70,10 @@ export class AdminServiceService {
   }
   getActiveOrderList(emailId:string){
    
-    return this.http.get<Order[]>("http://localhost:8094/getActiveOrderList/"+emailId)
+    return this.http.get<Order[]>("http://fastfood_backend:8094/api/getActiveOrderList/"+emailId)
   }
   getOrderList(emailId:string){
-    return this.http.get<Order[]>("http://localhost:8094/getOrderList/"+emailId)
+    return this.http.get<Order[]>("http://fastfood_backend:8094/api/getOrderList/"+emailId)
   }
 
   updateActiveStatus(itemId:number, status:string){
