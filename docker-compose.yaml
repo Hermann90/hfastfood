@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 services:
   fastfood_backend:
     build: ./fastfood_backend
@@ -12,8 +12,5 @@ services:
     container_name: fastfood_frontend
     ports:
       - 4200:4200
-  
-networks:
-  default:
-    name: fastfood_backend
-    external: true
+    depends_on:
+      - fastfood_backend
