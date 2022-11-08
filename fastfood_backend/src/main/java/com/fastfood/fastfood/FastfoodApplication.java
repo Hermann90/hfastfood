@@ -88,7 +88,7 @@ public class FastfoodApplication implements CommandLineRunner {
 		/**
 		 * Branch initialization
 		 */
-		Branch branch1 = branchRepository.save(new Branch(301,"EAST","Dschang","+237-999-999-9",user1,null,null,null));
+		Branch branch1 = branchRepository.save(new Branch(2001,"EAST","Dschang","+237-999-999-9",user1,null,null,null));
 
 		Branch branch2 = branchRepository.save(new Branch(302,"EAST","Dschang","+237-999-999-9",user2,null,null,null));
 
