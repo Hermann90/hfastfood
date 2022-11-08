@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@CrossOrigin
+//@CrossOrigin
+@CrossOrigin(origins="http://fastfood_frontend:4200")
 @RestController
 public class AuthenticationController {
 
