@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.mail.FetchProfile;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
