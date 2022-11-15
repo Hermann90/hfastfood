@@ -5,11 +5,18 @@ services:
     container_name: fastfood_frontend
     ports:
       - 4200:4200
-    depends_on:
-      - fastfood_backend
+    networks:
+      - front-tier
+      - back-tier
   
   fastfood_backend:
     build: ./fastfood_backend
     container_name: fastfood_backend
     ports:
       - 8094:8094
+    networks:
+      - back-tier
+networks:
+  # The presence of these objects is sufficient to define them
+  front-tier: {}
+  back-tier: {}
