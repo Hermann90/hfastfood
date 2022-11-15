@@ -4,12 +4,13 @@ import { SubCategory } from '../../Models/SubCategory';
 import { Category } from '../../Models/Category';
 import { Item } from '../../Models/Item';
 import { Order } from '../../Models/Order';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminServiceService {
-  baseUrl: string = "http://fastfood_backend:8094/api/admin";
+  baseUrl: string = environment.appUrl+"/api/admin";
   constructor(private http:HttpClient) { }
 
   getSubCategories(username:string){
@@ -70,10 +71,10 @@ export class AdminServiceService {
   }
   getActiveOrderList(emailId:string){
    
-    return this.http.get<Order[]>("http://fastfood_backend:8094/api/getActiveOrderList/"+emailId)
+    return this.http.get<Order[]>(environment.appUrl+"/api/getActiveOrderList/"+emailId)
   }
   getOrderList(emailId:string){
-    return this.http.get<Order[]>("http://fastfood_backend:8094/api/getOrderList/"+emailId)
+    return this.http.get<Order[]>(environment.appUrl+"/api/getOrderList/"+emailId)
   }
 
   updateActiveStatus(itemId:number, status:string){
