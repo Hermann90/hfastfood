@@ -69,6 +69,7 @@ public class FastfoodApplication implements CommandLineRunner {
 		 * User initialization
 		 */
 		List<User>users = new ArrayList<>();
+		system.out.println("\n\n\n================> USER"+userRepository.findByUserId(201).toString());
 		User user1 = userRepository.save(new User(201,"hermannchefouet@gmail.com","Hermann","Hermann_p@ss",
 				"Where Are you From ?", "Camerroon", "+237-999-999-9", "Admin",null,carryBox1,null,null));
 
