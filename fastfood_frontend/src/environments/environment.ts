@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  appUrl: 'http://fastfood_backend:8094'
+  appUrl: 'http://172.105.0.209:8094'
 };
 
 /*
