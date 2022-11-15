@@ -9,7 +9,7 @@ COPY . .
 RUN npm install
 RUN npm run build --prod
 
-CMD ["npm", "start"]
+CMD node_modules/.bin/ng serve --host 0.0.0.0 --port 4200 --disable-host-check
 
 FROM nginx:alpine
 COPY src/nginx/etc/conf.d/default.conf /etc/nginx/conf/default.conf
