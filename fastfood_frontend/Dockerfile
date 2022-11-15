@@ -12,5 +12,6 @@ RUN npm run build --prod
 CMD ["npm", "start"]
 
 FROM nginx:alpine
+RUN ls app/dist/
 COPY src/nginx/etc/conf.d/default.conf /etc/nginx/conf/default.conf
 COPY --from=builder app/dist/angular8-crud-demo usr/share/nginx/html
