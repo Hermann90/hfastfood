@@ -69,6 +69,7 @@ public class FastfoodApplication implements CommandLineRunner {
 			CarryBox carryBox3 = carryBoxRepository.save(new CarryBox(1003, 40.0, null,null));
 			CarryBox carryBox4 = carryBoxRepository.save(new CarryBox(1004, 50.0, null,null));
 			CarryBox carryBox5 = carryBoxRepository.save(new CarryBox(1005, 60.0, null,null));
+			CarryBox carryBoxn = carryBoxRepository.save(new CarryBox(2001, 20.0, null,null));
 
 			//------------------------------------------------------------------------------------------------------------------
 			/**
@@ -132,6 +133,8 @@ public class FastfoodApplication implements CommandLineRunner {
 			/**
 			 * Category initialization
 			 */
+			Category categoryn = categoryRepository.save(new Category(2001,"Food",null,branch1));
+
 			Category category1 = categoryRepository.save(new Category(5001,"Food",null,branch1));
 
 			Category category2 = categoryRepository.save(new Category(5002,"Alcohol",null,branch1));
@@ -146,6 +149,8 @@ public class FastfoodApplication implements CommandLineRunner {
 			/**
 			 * SubCategory initialization
 			 */
+			SubCategory subCategoryn = subCategoryRepository.save(new SubCategory(2001,"Cooking",null,categoryn));
+
 			SubCategory subCategory1 = subCategoryRepository.save(new SubCategory(6001,"Cooking",null,category1));
 			SubCategory subCategory2 = subCategoryRepository.save(new SubCategory(6002,"Rejected",null,category1));
 			SubCategory subCategory3 = subCategoryRepository.save(new SubCategory(6003,"Delivered",null,category2));
