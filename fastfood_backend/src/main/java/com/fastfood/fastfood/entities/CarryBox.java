@@ -17,7 +17,7 @@ public class CarryBox{
 
     @Id
     @Column(name="BOXID")
-    //@GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int boxId;
 
 

@@ -12,4 +12,6 @@ public interface CarryBoxRepository extends JpaRepository<CarryBox, Integer> {
     @Query("select max(carryBox.boxId) from CarryBox carryBox")
     public int getMaxBoxId();
 
+    public CarryBox findByBoxId(int boxId);
+
 }
