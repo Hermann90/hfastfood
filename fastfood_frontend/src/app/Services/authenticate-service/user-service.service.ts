@@ -13,7 +13,7 @@ import { environment } from '../../../environments/environment';
 export class UserServiceService {
 
   constructor(private http:HttpClient) { }
-  baseUrl: string = environment.appUrl+"/api";
+  baseUrl: string = environment.appUrl;
    
 
   /*

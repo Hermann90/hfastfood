@@ -10,7 +10,7 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class AdminServiceService {
-  baseUrl: string = environment.appUrl+"/api/admin";
+  baseUrl: string = environment.appUrl+"/admin";
   constructor(private http:HttpClient) { }
 
   getSubCategories(username:string){

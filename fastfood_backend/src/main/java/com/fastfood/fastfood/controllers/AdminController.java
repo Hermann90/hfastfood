@@ -43,8 +43,8 @@ public class AdminController {
 	EntityManager entityManager;
 	
 	/**
-	 * Method Description : Get all the user details by taking user name
-	 * @param username    : user name of the user
+	 * Method Description : Get all the user details by taking username
+	 * @param username    : username of the user
 	 * @return
 	 */
 	@GetMapping("/getUser/{username}")
