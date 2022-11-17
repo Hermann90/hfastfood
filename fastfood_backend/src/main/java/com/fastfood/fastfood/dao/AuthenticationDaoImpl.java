@@ -98,14 +98,14 @@ public class AuthenticationDaoImpl implements AuthenticationDao {
 		CarryBox carryBox=new CarryBox();
 		System.out.println("\n\n\n 1 ========================================================================== \n\n\n");
 		int carryBoxCount=carryBoxRepository.getCarryBoxCount().intValue();
-		System.out.println(carryBoxCount+"\n\n\n 2========================================================================== \n\n\n");
 
 		if(carryBoxCount>0) {
 			carryBox.setBoxId(carryBoxRepository.getMaxBoxId()+1);
+			System.out.println(carryBoxCount+"\n\n\n carryBoxCount========================================================================== \n\n\n"+carryBoxRepository.getMaxBoxId()+1);
 		}
 
 		else {
-
+			System.out.println(carryBoxCount+"\n\n\n carryBoxId========================================================================== \n\n\n"+carryBoxId);
 			carryBox.setBoxId(carryBoxId+5000);
 		}
 		carryBoxRepository.save(carryBox);
