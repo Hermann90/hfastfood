@@ -229,4 +229,25 @@ insert into elef_category(categoryid,categoryname,branch) values(7007,'Drinks',2
   insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2072,0,"","Limca",45,"","","2072.jpg",1,"ns","veg",2003,1007,5017);
   insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2073,1,"","Maaza",45,"","","2073.jpg",1,"ns","veg",2003,1006,5017);
   insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2074,0,"","Sprite",45,"","","2074.jpg",1,"ns","veg",2003,1005,5017);
+--- Last
+
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2075,1,"","Venilla",290,"","","2075.jpg",1,"ns","non-veg",2004,1006,5019);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2076,1,"","StrawBerry",249,"","","2076.jpg",1,"ns","non-veg",2004,1007,5019);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2077,1,"","Chocolate",249,"","","2077.jpg",1,"ns","non-veg",2004,1007,5019);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2078,0,"","Qubani Ka Meetha",107,"","","2078.jpg",1,"ns","veg",2004,1007,5019);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2079,1,"","Double Ka Meetha",73,"","","2079.jpg",1,"s","veg",2004,1003,5019);
+
+
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2080,1,"","Diet Coke",150,"","","2080.jpg",1,"s","veg",2004,1004,5020);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2081,1,"","Thums Up",50,"","","2081.jpg",1,"ns","veg",2004,1003,5020);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2082,1,"","Mineral Water",45,"","","2082.jpg",1,"ns","veg",2004,1004,5020);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2083,1,"","Maaza",45,"","","2083.jpg",1,"ns","veg",2004,1005,5020);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2084,1,"","Sprite",45,"","","2084.jpg",1,"ns","veg",2004,1006,5020);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2085,1,"","Coke Tin",60,"","","2085.jpg",1,"ns","veg",2004,1007,5020);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2086,0,"","Fanta",45,"","","2086.jpg",1,"ns","veg",2004,1007,5020);
+
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2087,1,"","Paneer 65",150,"","","2087.jpg",1,"s","veg",2004,1001,5018);
+insert into elef_item(itemid,active,itemdescription,itemname,itemprice,picbyte,pic_type,picture,quantity,speciality,type,branch,carry_box,subcategory) values (2088,1,"","Veg Manchurian",819,"","","2088.jpg",1,"ns","veg",2004,1001,5018);
+
+
 commit;
