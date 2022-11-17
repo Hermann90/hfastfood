@@ -116,7 +116,7 @@ public class AuthenticationDaoImpl implements AuthenticationDao {
 		System.out.println(user+"\n\n\n My CB ========================================================================== >"+cb.toString());
 
 
-		user.setCarryBox(carryBox);
+		user.setCarryBox(cb);
 		userRepository.save(user);
 
 		System.out.println(user+"\n\n\n 1 ========================================================================== >"+address);
