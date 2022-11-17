@@ -96,23 +96,23 @@ public class AuthenticationDaoImpl implements AuthenticationDao {
 		}
 		user.setRole("Customer");
 		CarryBox carryBox=new CarryBox();
-		System.out.println("\n\n\n 1 ========================================================================== \n\n\n");
 		int carryBoxCount=carryBoxRepository.getCarryBoxCount().intValue();
+		System.out.println("\n\n\n carryBoxCount 1 ==========================================================================>"+carryBoxCount);
 
 		if(carryBoxCount>0) {
 			carryBox.setBoxId(carryBoxRepository.getMaxBoxId().intValue()+1);
-			System.out.println(carryBoxCount+"\n\n\n carryBoxCount========================================================================== \n\n\n"+carryBoxRepository.getMaxBoxId()+1);
+			System.out.println(carryBoxCount+"\n\n\n carryBoxCount==========================================================================>"+carryBoxRepository.getMaxBoxId().intValue()+1);
 		}
 
 		else {
-			System.out.println(carryBoxCount+"\n\n\n carryBoxId========================================================================== \n\n\n"+carryBoxId);
+			System.out.println(carryBoxCount+"\n\n\n carryBoxId==========================================================================>"+carryBoxId);
 			carryBox.setBoxId(carryBoxId+5000);
 		}
 		carryBoxRepository.save(carryBox);
 		user.setCarryBox(carryBox);
 		userRepository.save(user);
 
-		System.out.println(user+"\n\n\n 1 ========================================================================== \n\n\n"+address);
+		System.out.println(user+"\n\n\n 1 ========================================================================== >"+address);
 
 		if(address!=null) {
 		User user1=userRepository.findByEmailId(user.getEmailId());
