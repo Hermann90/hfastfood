@@ -15,10 +15,10 @@ services:
     ports:
            - "3306:3306"
     environment:
-           - MYSQL_ROOT_PASSWORD=lWZRv2D$2SEX32Y5RgdC5J
+           - MYSQL_ROOT_PASSWORD=lWZRv2D2SEX32Y5RgdC5J
            - MYSQL_DATABASE=userauth
            - MYSQL_USER=admin
-           - MYSQL_PASSWORD=lWZRv2D$2SEX32Y5RgdC5J
+           - MYSQL_PASSWORD=lWZRv2D2SEX32Y5RgdC5J
            - MYSQL_ROOT_HOST=%
     volumes:
            - ./my-datavolume:/var/lib/mysql
