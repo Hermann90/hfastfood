@@ -104,12 +104,18 @@ public class AuthenticationDaoImpl implements AuthenticationDao {
 
 			carryBox.setBoxId(carryBoxRepository.getMaxBoxId().intValue()+1);
 		}
-
 		else {
 			System.out.println(carryBoxCount+"\n\n\n carryBoxId==========================================================================>"+carryBoxId);
 			carryBox.setBoxId(carryBoxId+5000);
 		}
-		carryBoxRepository.save(carryBox);
+
+		System.out.println(user+"\n\n\n My CB OUt ========================================================================== >"+carryBox.toString());
+
+		CarryBox cb = carryBoxRepository.save(carryBox);
+
+		System.out.println(user+"\n\n\n My CB ========================================================================== >"+cb.toString());
+
+
 		user.setCarryBox(carryBox);
 		userRepository.save(user);
 

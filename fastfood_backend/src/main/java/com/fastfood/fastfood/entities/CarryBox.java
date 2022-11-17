@@ -88,9 +88,13 @@ public class CarryBox{
         this.getItemlist().remove(item);
     }
 
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "CarryBox{" +
+                "boxId=" + boxId +
+                ", totalCost=" + totalCost +
+                ", itemlist=" + itemlist +
+                ", customer=" + customer +
+                '}';
+    }
 }
