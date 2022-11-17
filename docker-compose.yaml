@@ -8,6 +8,25 @@ services:
     networks:
       - front-tier
       - back-tier
+      - db-tier
+  
+  db:
+    image: 'mysql/mysql-server:5.7'
+    ports:
+           - "3306:3306"
+    environment:
+           - MYSQL_ROOT_PASSWORD=lWZRv2D$2SEX32Y5RgdC5J
+           - MYSQL_DATABASE=userauth
+           - MYSQL_USER=admin
+           - MYSQL_PASSWORD=lWZRv2D$2SEX32Y5RgdC5J
+           - MYSQL_ROOT_HOST=%
+    volumes:
+           - ./my-datavolume:/var/lib/mysql
+    healthcheck:
+           test: ["CMD","mysqladmin","ping","-h","localhost"]
+           timeout: 20s
+           retries: 10
+    restart: always
   
   fastfood_backend:
     build: ./fastfood_backend
@@ -16,6 +35,7 @@ services:
       - 8094:8094
     networks:
       - back-tier
+      - db-tier
 networks:
   # The presence of these objects is sufficient to define them
   front-tier: {}
