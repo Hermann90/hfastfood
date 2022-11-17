@@ -100,7 +100,7 @@ public class AuthenticationDaoImpl implements AuthenticationDao {
 		int carryBoxCount=carryBoxRepository.getCarryBoxCount().intValue();
 
 		if(carryBoxCount>0) {
-			carryBox.setBoxId(carryBoxRepository.getMaxBoxId()+1);
+			carryBox.setBoxId(carryBoxRepository.getMaxBoxId().intValue()+1);
 			System.out.println(carryBoxCount+"\n\n\n carryBoxCount========================================================================== \n\n\n"+carryBoxRepository.getMaxBoxId()+1);
 		}
 
