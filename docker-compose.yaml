@@ -31,6 +31,11 @@ services:
   fastfood_backend:
     build: ./fastfood_backend
     container_name: fastfood_backend
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: lWZRv2D2SEX32Y5RgdC5J
+      MYSQL_DATABASE: userauth
     ports:
       - 8094:8094
     networks:

@@ -134,8 +134,8 @@ pipeline {
             }
         }
 
-        //Helm Chart push as tgz file
-        stage("pushing the helm charts to nexus"){
+        //Backend Helm Chart push as tgz file
+        stage("pushing the Backend helm charts to nexus"){
             steps{
                 script{
                     withCredentials([string(credentialsId: 'nexus-pass', variable: 'docker_password')]) {
@@ -149,6 +149,23 @@ pipeline {
                     }
                 }
             }
-        }   
+        }
+
+        //Frontend Helm Chart push as tgz file
+        stage("pushing the Frontend helm charts to nexus"){
+            steps{
+                script{
+                    withCredentials([string(credentialsId: 'nexus-pass', variable: 'docker_password')]) {
+                          dir('fastfood_frontend/') {
+                             sh '''
+                                 helmversion=$( helm show chart helm_fastfood_back | grep version | cut -d: -f 2 | tr -d ' ')
+                                 tar -czvf  helm_fastfood_front-${helmversion}.tgz helm_fastfood_front/
+                                 curl -u jenkins-user:$docker_password http://139.177.192.139:8081/repository/fastfood-helm-rep-front/ --upload-file helm_fastfood_front-${helmversion}.tgz -v
+                            '''
+                          }
+                    }
+                }
+            }
+        }      
     }
 }
