@@ -31,7 +31,7 @@ pipeline {
             steps {
                 dir('./fastfood_backend/'){
                     withSonarQubeEnv('SonarServer') {
-                        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Hermann90_fastfoodtest -Dspring.profiles.active=test'
+                        sh 'mvn mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Hermann90_hfastfood -Dspring.profiles.active=test'
                     }
                 }
             }
