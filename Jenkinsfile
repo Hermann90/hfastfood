@@ -31,7 +31,7 @@ pipeline {
             steps {
                 dir('./fastfood_backend/'){
                     withSonarQubeEnv('SonarServer') {
-                        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Hermann90_fastfoodtest'
+                        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Hermann90_fastfoodtest -Dspring.profiles.active=test'
                     }
                 }
             }
@@ -58,7 +58,7 @@ pipeline {
                 echo 'Build Back-End Project...'
                 dir('./fastfood_backend/'){
                     script {
-                    sh "mvn package -DskipTests=true"
+                    sh "mvn package -DskipTests=true -Dspring.profiles.active=test"
                     }
                 }
             }
