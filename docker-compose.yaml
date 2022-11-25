@@ -5,6 +5,8 @@ services:
     container_name: fastfood_frontend
     ports:
       - 4200:4200
+    depends_on:
+      - fastfood_backend
     networks:
       - front-tier
       - back-tier
