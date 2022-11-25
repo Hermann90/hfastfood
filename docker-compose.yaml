@@ -25,7 +25,7 @@ services:
            test: ["CMD","mysqladmin","ping","-h","localhost"]
            timeout: 20s
            retries: 10
-    restart: always
+    # restart: always
 
   fastfood_backend:
     build: ./fastfood_backend
@@ -40,7 +40,7 @@ services:
     networks:
       - back-tier
       - db-tier
-    restart: always
+    # restart: always
 networks:
   # The presence of these objects is sufficient to define them
   front-tier: {}
