@@ -52,7 +52,7 @@
 version: '3.3'
 services:
   fastfood_frontend:
-    image: hermann90/fastfood_frontend:latest
+    image: hermann90/frontfood:v1
     container_name: fastfood_frontend
     ports:
       - 4200:4200
@@ -80,7 +80,7 @@ services:
     # restart: always
 
   fastfood_backend:
-    image: hermann90/fastfood_backend:latest
+    image: hermann90/backfood:v1
     container_name: fastfood_backend
     environment:
       MYSQL_HOST: db
