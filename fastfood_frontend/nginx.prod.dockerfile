@@ -23,7 +23,7 @@ FROM nginx:alpine
 VOLUME /var/cache/nginx
 
 # --from=node references to image output of Stage 1. then copy content of dist to location where nginx looks for static files by default
-COPY --from=node /usr/src/app/dist/frontend /usr/share/nginx/html
+COPY --from=node /usr/src/app/dist/ELEFoods /usr/share/nginx/html
 # COPY --from=node /usr/src/app/dist/angular-ui /etc/nginx/html
 
 # copy nginx configuration file which is fgoing to help with routes. there are lots of things you can do here as well like SSL Certificate/cacheing setting for browser
