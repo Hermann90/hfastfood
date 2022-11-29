@@ -12,7 +12,7 @@ COPY . .
 RUN npm install
 
 # Run Prod Build inside your image filesystem
-RUN npm run build-prod
+RUN npm run build
 
 #----------------------------------------- Stage 2 ----------------------------------------
 # Create lightweight image out of stage 1 using nginx
