@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: hermann90/frontfood:v1
+          image: hermann90/frontfood:v2
           imagePullPolicy: Always
           lifecycle:
             preStop:
